@@ -34,3 +34,28 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+
+// pobieramy wszystkie linki nawigacyjne
+const navLinks = document.querySelectorAll('header ul li a');
+
+// dla każdego linku dodajemy obsługę zdarzenia kliknięcia
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        // zatrzymujemy domyślne zachowanie przeglądarki
+        e.preventDefault();
+
+        // pobieramy identyfikator sekcji, do której chcemy się przewinąć
+        let targetId = link.getAttribute('href');
+
+        // znajdujemy element HTML tej sekcji na podstawie identyfikatora
+        let targetSection = document.querySelector(targetId);
+
+        // jeśli element istnieje, przewijamy do niego z animacją
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
