@@ -451,6 +451,95 @@ navbar ul li a:hover:after {
 }
 
 
+ /* Welcome and Contact pages */
+.welcome-section {
+    height: 80vh;
+    padding: 50px;
+    margin: auto;
+    width: 60%;
+    text-align: center;
+}
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 100px 50px 50px 50px;
+}
+
+.welcome-section h1,
+.contact-section h1{
+    color: var(--light-gray-font-color);
+    font-size: 50px;
+    padding: 10px;
+}
+
+.welcome-section div{
+    color: var(--medium-gray-font-color);
+    padding: 10px;
+    font-size: 17px;
+    font-family: monospace;
+}
+
+/* Contact form */
+
+.contact-form{
+	padding: 30px;
+	/* margin: 50px auto; */
+	/* box-shadow: 1px 1px 4px var(--neon-color), inset 1px 1px 4px var(--neon-color);
+	border-radius: 25px;
+	border: 3px solid var(--neon-color); */
+    text-align: center;
+    /* width: 40vw; */
+}
+
+input[type=text], input[type=email] {
+    padding: 15px;
+    border: 0;
+    border-radius:10px;
+  }
+
+.contact-form *::placeholder,
+.contact-form * {
+    color:var(--gray-color);
+    font-weight:600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px 0;
+}
+
+.name, .email {
+    display: inline-block;
+    width: calc(50% - 4px);
+}
+
+.textarea {
+    text-indent: 4px;
+    width:100%;
+    resize: vertical;
+    padding:15px;
+    border-radius:10px;
+    border:0;
+    box-shadow:4px 4px 10px rgba(255, 255, 255, 0.06);
+    height:150px;
+    min-height: 58px;
+    max-height: 300px;
+  }
+
+  input[type=submit]{
+    padding:10px;
+    margin: 10px;
+    border:none;
+    cursor: pointer;
+    background-color: white;
+    /* font-weight:600; */
+    border-radius:10px;
+    width:30%;
+  }
+  input[type=submit]:hover{
+    background-color: #ffffffc4;
+  }
+
 @media screen and (max-width: 1560px) {
 
     .content-image-div {
@@ -587,16 +676,42 @@ navbar ul li a:hover:after {
         padding-bottom: 10px;
         font-size: 11px;
     }
+
+
+    .welcome-section {
+        width: 100%;
+    }
+    .welcome-section h1{
+        font-size: 34px;
+    }
+    
+    .welcome-section div{
+        font-size: 14px;
+    }
 }
 
 
 @media screen and (max-width: 768px) {
 
+    .contact-section {
+        padding: 80px 10px 10px 10px;
+    }
     .navbar ul li a {
         margin: 0px 10px;
         font-size: 14px;
         padding: 10px;
         white-space: nowrap;
+    }
+
+    .contact-form {
+        padding: 10px;
+    }
+    .name, .email {
+        display: block;
+        width: 100%;
+    }
+    .contact-section h1{
+        font-size: 30px;
     }
 }
 

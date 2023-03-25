@@ -50,3 +50,113 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
+
+// Change main content 
+
+var content = document.querySelector('#container');
+var links = document.querySelectorAll('.navitem');
+var dict = {} // html content of pages
+
+// Welcome me Page
+const welcomePage = `<span style="background-color: lime">Replacement HTML</span>`;
+
+for (var i = 0; i < links.length; i++)
+{
+    dict[links[i].id] = "a"
+}
+
+
+function changeContent(clickedNavItem){
+    content.innerHTML = dict[clickedNavItem.id];
+}
+
+
+const esnacksPage = `<div id="imgModal" class="modal">
+<div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="" id="modal-image" class="modal-image"/>
+</div>
+</div>
+<section id="content-section" class="content-section">
+<div class="content-image-div">
+    <img src="static/eSnacks.png" id="imageBox" alt="eSnacks
+        website image">
+</div>
+<div class="content-description-div">
+    <h1 class="project-title">Welcome to my website!</h1>
+    <div class="project-tags">#przykładowe #tagi #super #projekt</div>
+    <div class="project-description">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Doloribus quisquam, eius magni
+            repellat voluptatem totam nostrum nulla quos
+            consectetur, sint mollitia porro iusto minus aut
+            modi explicabo fugiat, dolorem reprehenderit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Doloribus quisquam, eius magni repellat
+            voluptatem totam nostrum nulla quos consectetur,
+            sint mollitia porro iusto minus aut modi explicabo
+            fugiat, dolorem reprehenderit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Doloribus quisquam, eius magni repellat
+            voluptatem totam nostrum nulla quos consectetur,
+            sint mollitia porro iusto minus aut modi explicabo
+            fugiat, dolorem reprehenderit.</p>
+        <p>Lorem ipsum dolor sit amet connulla quos consectetur,
+            sint mollitia porro iusto minus aut modi orem
+            reprehenderit.</p>
+    </div>
+    <div class="project-hexagons" style="display: none;">
+        <ul class="hexagons-ul">
+            <li class="hexagon">
+                <div>
+                    Hex 1
+                </div>
+            </li>
+            <li class="hexagon">
+                <div>
+                    Hex 2
+                </div>
+            </li>
+            <li class="hexagon">
+                <div>
+                    Hex 3
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</section>
+<article id="boxes-article" class="boxes-article">
+<ul class="boxes-ul">
+    <li class="box">
+        <h3>Technologia</h3>
+        <div class="box-description">Opisowy opis</div>
+        <hr class="hr-neon" style="margin-top:auto;">
+        <div class="box-caption">Ver. 6.0.14</div>
+    </li>
+    <li class="box">
+        <h3>Fajna technologia z kilkoma wyrazami</h3>
+        <div class="box-description">Opisowy opis</div>
+        <hr class="hr-neon" style="margin-top:auto;">
+        <div class="box-caption">Ver. 6.0.14</div>
+    </li>
+    <li class="box">
+        <h3>Technologia</h3>
+        <div class="box-description">Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Quidem modi optio
+            commodi magni, ipsum molestiae dolorum possimus esse
+            vero alias ullam nemo ea quas nulla quos soluta.</div>
+        <hr class="hr-neon" style="margin-top:auto;">
+        <div class="box-caption">Ver. 6.0.14</div>
+    </li>
+    <li class="box">
+        <h3>Technologia</h3>
+        <div class="box-description">Placeholder</div>
+        <hr class="hr-neon" style="margin-top:auto;">
+        <div class="box-caption">Ver. 6.0.14</div>
+    </li>
+</ul>
+</article>`
