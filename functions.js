@@ -36,7 +36,7 @@ window.onclick = function (event) {
 };
 
 
-// Nav items change active class on click
+// Nav items change active class on click, it adds .active class to clicked item and removes it from other one
 
 document.addEventListener('DOMContentLoaded', function () {
     var navItems = document.querySelectorAll('.navitem');
