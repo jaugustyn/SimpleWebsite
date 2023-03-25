@@ -62,26 +62,15 @@ body {
   list-style: none;
 }
 
-.header ul li {
-  list-style: none;
+.header ul li a {
+  display: block;
   margin: 0px 25px;
-  width: auto;
+  padding: 15px;
   border-top: 3px solid transparent;
   border-bottom: 3px solid var(--neon-color);
   border-radius: 10%;
-  font-weight: bold;
-}
-
-.header ul li:hover {
-  /* color: var(--background-gradient-to);
-  box-shadow: 0 3px 15px 0 var(--neon-color), 0 3px 15px 0 var(--neon-color); */
-  border-radius: 10%;
-}
-
-.header li a {
-  padding: 15px;
-  display: block;
   font-size: 16px;
+  font-weight: bold;
   text-decoration: none;
   color: var(--light-gray-font-color);
 }
@@ -103,10 +92,10 @@ body {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  justify-content: space-between;
+  justify-content: space-around;
 
   padding: 0 30px;
-  margin-left: 250px; /* width of footer on the left */
+  margin-left: 250px; /* width of side-footer on the left */
 }
 
 /*****Image Modal *****/
@@ -162,7 +151,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   /* background-color: #ffffff; */
-  padding: 80px 0 40px 0;
+  padding: 50px 0;
 }
 
  /* Image */
@@ -185,10 +174,9 @@ body {
  /* Description */
 
 .content-description-div {
-  max-width: 50%;
-  padding: 0 80px 0 40px;
+  padding: 0 100px 0 50px;
   /* background-color: #b889ff98; */
-  height: auto;
+  /* height: auto; */
   align-self: center;
 }
 
@@ -217,28 +205,6 @@ body {
   padding: 5px 0px;
 }
 
-@media screen and (max-width: 1740px) {
-
-  .content-image-div {
-    padding: 0 40px;
-  }
-
-  .content-description-div {
-    padding: 0 40px;
-  }
-
-  .project-title {
-    font-size: calc(var(--project-title-font-size) - 12px);
-  }
-  .project-tags {
-    font-size: calc(var(--project-tags-font-size) - 1px);
-  }
-  .project-description {
-    font-size: calc(var(--project-description-font-size) - 1px);
-    line-height: 18px;
-  }
-}
-
 
 /* Article's boxes (technologies) */
 
@@ -258,14 +224,15 @@ body {
 }
 
 .box {
+  position: relative;
   width: 300px;
-  height: auto;
+  max-width: 300px;
   /* background-color: #0076b51a; */
   padding: 10px;
   margin: 20px;
   display: flex;
   flex-direction: column;
-  position: relative;
+  /* flex-basis: 20%; */
 }
 
 .box h3{
@@ -310,8 +277,11 @@ body {
   border-right: 5px solid var(--neon-color);
   border-radius: 5px;
 }
+
 .hr-gray{
-  border: 1px solid var(--gray-color);
+  border-top: 1px solid var(--gray-color);
+  border-right: 1px solid var(--gray-color);
+  border-radius: 1px;
 }
 
 .vr-gray {
@@ -394,7 +364,6 @@ body {
   position: fixed;
   height: 100%;
   width: 250px;
-  min-height: 170px;
   padding: 10px;
   overflow: auto;
   
@@ -510,15 +479,58 @@ body {
   font-size: small;
 }
 
+
+@media screen and (max-width: 1740px) {
+
+  .content-image-div {
+    padding: 0 40px;
+  }
+
+  .content-description-div {
+    padding: 0 40px;
+  }
+
+  .project-title {
+    font-size: calc(var(--project-title-font-size) - 12px);
+  }
+  .project-tags {
+    font-size: calc(var(--project-tags-font-size) - 1px);
+  }
+  .project-description {
+    font-size: calc(var(--project-description-font-size) - 1px);
+    line-height: 18px;
+  }
+  .boxes-ul {
+    gap: 10px 10px;
+  }
+  .box {
+    width: 300px;
+    margin: 10px;
+    /* flex-basis: 40%;/ */
+    max-width: 250px;
+  }
+  .box h3 {
+    font-size: 16px;
+  }
+
+  .box-description {
+    width: 90%;
+    font-size: 13px;
+  }
+  .vr-gray, .vr-neon {
+    margin-left: -30px;
+  }
+}
+
 @media screen and (max-width: 1248px) {
   .side-footer {
     position: relative;
-    /* bottom: 0; */
     flex-direction: row;
     width: 100%;
-    /* min-height: 100px; */
+    max-height: 100px;
     overflow: unset;
     background-color: var(--gray-color);
+    /* background-color: #e2e2e2; */
   }
   .side-footer a {
     width: 50px;
@@ -553,6 +565,9 @@ body {
   }
 
   /* Page content */
+  .container {
+    padding: 0 20px;
+  }
   .content-section {
     padding: 30px 0 15px 0;
     flex-direction: column-reverse;
@@ -579,8 +594,11 @@ body {
 
 @media screen and (max-width: 768px) {
   
-  .header {
-    justify-content: center;
+  .header ul li a{
+    margin: 0px 10px;
+    font-size: 14px;
+    padding: 10px;
+    white-space: nowrap;
   }
 }
 
