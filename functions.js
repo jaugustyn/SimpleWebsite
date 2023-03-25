@@ -1,11 +1,11 @@
 window.onload = (event) => {
-  
+
 };
 
 let imageBox1 = document.getElementById("imageBox");
 
 function galleryFunction(smallImg) {
-  imageBox1.src = smallImg.src;
+    imageBox1.src = smallImg.src;
 }
 
 // Get the modal image tag
@@ -18,19 +18,35 @@ var modalImage = document.getElementById("modal-image");
 
 // When the user clicks the big picture, set the image and open the modal
 imageBox1.onclick = function (e) {
-  var src = e.srcElement.src;
-  modal.style.display = "block";
-  modalImage.src = src;
+    var src = e.srcElement.src;
+    modal.style.display = "block";
+    modalImage.src = src;
 };
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
-  modal.style.display = "none";
+    modal.style.display = "none";
 };
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-  if (event.target == modal || event.target == document.getElementsByClassName("modal-content")[0]) {
-    modal.style.display = "none";
-  }
+    if (event.target == modal || event.target == document.getElementsByClassName("modal-content")[0]) {
+        modal.style.display = "none";
+    }
 };
+
+
+// Nav items change active class on click
+
+document.addEventListener('DOMContentLoaded', function () {
+    var navItems = document.querySelectorAll('.navitem');
+
+    navItems.forEach(function (one) {
+        one.addEventListener('click', function () {
+            navItems.forEach(function (otherOne) {
+                otherOne.classList.remove('active');
+            });
+            this.classList.add('active');
+        });
+    });
+});
