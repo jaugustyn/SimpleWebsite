@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>JAugustyn</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=LeagueSpartan|Sofia|Trirong">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="icon" type="image/x-icon" href="./static/icon.ico">
+    <title>Project eSnacks</title>
 </head>
 
 <body>
@@ -18,25 +19,25 @@
         </div>
         <ul>
             <li>
-                <a id="home" href="./index.html" class="navitem">Home</a>
+                <a href="./index.html" class="navitem">Home</a>
             </li>
             <li>
-                <a id="esnacks" href="./projectPage.html" class="navitem active">Project eSnacks</a>
+                <a href="./projectPage.html" class="navitem active">Project eSnacks</a>
             </li>
             <li>
-                <a id="contactme" href="./contactMePage.html" class="navitem">Contact me</a>
+                <a href="./contactMePage.html" class="navitem">Contact me</a>
             </li>
         </ul>
     </nav>
-    <main class="container" id="container">
-        <div id="imgModal" class="modal">
+    <main class="container">
+        <div id="modal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <img src="" id="modal-image" class="modal-image" />
             </div>
         </div>
         <section id="content-section" class="content-section">
-            <div class="content-image-div">
+            <div class="content-image">
                 <img src="static/eSnacks.png" id="imageBox" alt="eSnacks website image">
             </div>
             <div class="content-description-div">
@@ -57,28 +58,28 @@
         <article id="boxes-article" class="boxes-article">
             <ul class="boxes-ul">
                 <li class="box">
-                    <h3>Asp.Net Core</h3>
+                    <h1>Asp.Net Core</h1>
                     <div class="box-description">A cross-platform, high-performance, open-source framework for building
                         modern, cloud-based, Internet-connected applications.</div>
                     <hr class="hr-neon">
                     <div class="box-caption">.NET 6</div>
                 </li>
                 <li class="box">
-                    <h3>Entity Framework</h3>
+                    <h1>Entity Framework</h1>
                     <div class="box-description">A lightweight, extensible, open source and cross-platform ORM for .NET
                         applications.</div>
                     <hr class="hr-neon">
                     <div class="box-caption">Ver. 6.0.14</div>
                 </li>
                 <li class="box">
-                    <h3>Microsoft SQL Server</h3>
+                    <h1>Microsoft SQL Server</h1>
                     <div class="box-description">A relational database management system developed by Microsoft. It is a
                         highly scalable, secure, and reliable database system used by businesses of all sizes.</div>
                     <hr class="hr-neon">
                     <div class="box-caption">Ver. 2012+</div>
                 </li>
                 <li class="box">
-                    <h3>Docker</h3>
+                    <h1>Docker</h1>
                     <div class="box-description">An open platform for developing, shipping, and running applications. It
                         enables developers to easily build, package, and deploy applications as portable containers that
                         can run almost anywhere.</div>
@@ -88,33 +89,36 @@
             </ul>
         </article>
     </main>
-    <aside class="side-footer">
+    <footer class="side-footer">
         <a href="#" class="google">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <i class="fa fa-google"></i>
+            <i class="fa fa-google">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </i>
         </a>
         <a href="https://github.com/jaugustyn/SimpleWebsite" class="github" target="_blank">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <i class="fa fa-github"></i>
+            <i class="fa fa-github">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </i>
         </a>
         <a href="#" class="linkedin">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <i class="fa fa-linkedin"></i>
+            <i class="fa fa-linkedin">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </i>
         </a>
         <div class="footer-footer">
             <p>&copy; 2023</p>
             <p>Jakub Augustyn</p>
         </div>
-    </aside>
+    </footer>
 
     <script src="./functions.js"></script>
 </body>
