@@ -1,31 +1,30 @@
-let imageBox1 = document.getElementById("imageBox");
+////// Image modal //////
 
-if (imageBox1 != null) {
-    function galleryFunction(smallImg) {
-        imageBox1.src = smallImg.src;
-    }
+let imageElem = document.querySelector("#imageBox");
+
+if (imageElem != null) {
 
     // Get the modal image tag
-    var modal = document.getElementById("imgModal");
+    var modal = document.querySelector("#imgModal");
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+    // Get the element that closes the modal
+    var close = document.querySelector(".close");
 
     var modalImage = document.getElementById("modal-image");
 
-    // When the user clicks the big picture, set the image and open the modal
-    imageBox1.onclick = function (e) {
-        var src = e.srcElement.src;
+    // When the user clicks on the image, the model opens with an enlarged version of the image
+    imageElem.onclick = function (elem) {
+        var src = elem.target.src;
         modal.style.display = "block";
         modalImage.src = src;
     };
 
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
+    // Closes the modal if the element was clicked
+    close.onclick = function () {
         modal.style.display = "none";
     };
 
-    // When the user clicks anywhere outside of the modal, close it
+    // Closes the modal if someone clicks anywhere outside the modal
     window.onclick = function (event) {
         if (event.target == modal || event.target == document.getElementsByClassName("modal-content")[0]) {
             modal.style.display = "none";
@@ -33,39 +32,3 @@ if (imageBox1 != null) {
     };
 
 }
-
-// Nav items change active class on click, it adds .active class to clicked item and removes it from other one
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     var navItems = document.querySelectorAll('.navitem');
-
-//     navItems.forEach(function (one) {
-//         one.addEventListener('click', function () {
-//             navItems.forEach(function (otherOne) {
-//                 otherOne.classList.remove('active');
-//             });
-//             this.classList.add('active');
-//         });
-//     });
-// });
-
-
-
-// Change main content
-
-// var content = document.querySelector('#container');
-// var links = document.querySelectorAll('.navitem');
-// var dict = {} // html content of pages
-
-// // Welcome me Page
-// const welcomePage = `<span style="background-color: lime">Replacement HTML</span>`;
-
-// for (var i = 0; i < links.length; i++)
-// {
-//     dict[links[i].id] = "a"
-// }
-
-
-// function changeContent(clickedNavItem){
-//     content.innerHTML = dict[clickedNavItem.id];
-// }
