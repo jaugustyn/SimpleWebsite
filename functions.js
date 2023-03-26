@@ -26,7 +26,7 @@ if (imageElem != null) {
 
     // Closes the modal if someone clicks anywhere outside the modal
     window.onclick = function (event) {
-        if (event.target == modal || event.target == document.getElementsByClassName("modal-content")[0]) {
+        if (event.target == modal || event.target == document.querySelector(".modal-content")) {
             modal.style.display = "none";
         }
     };
