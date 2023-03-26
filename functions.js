@@ -5,7 +5,7 @@ let imageElem = document.querySelector("#imageBox");
 if (imageElem != null) {
 
     // Get the modal image tag
-    var modal = document.querySelector("#imgModal");
+    var modal = document.querySelector("#modal");
 
     // Get the element that closes the modal
     var close = document.querySelector(".close");
