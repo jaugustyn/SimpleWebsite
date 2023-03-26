@@ -1,136 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./styles.css">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>JAugustyn</title>
-        <link rel="icon" type="image/x-icon" href="./static/icon.ico">
-    </head>
-    <body>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="static/logo.png" alt="Logo">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>JAugustyn</title>
+    <link rel="icon" type="image/x-icon" href="./static/icon.ico">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="static/logo.png" alt="Logo">
+        </div>
+        <ul>
+            <li>
+                <a id="home" href="./index.html" class="navitem">Home</a>
+            </li>
+            <li>
+                <a id="esnacks" href="./projectPage.html" class="navitem active">Project eSnacks</a>
+            </li>
+            <li>
+                <a id="contactme" href="./contactMePage.html" class="navitem">Contact me</a>
+            </li>
+        </ul>
+    </nav>
+    <main class="container" id="container">
+        <div id="imgModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="" id="modal-image" class="modal-image" />
             </div>
-            <ul>
-                <li>
-                    <a id="home" href="./index.html" class="navitem">Home</a>
+        </div>
+        <section id="content-section" class="content-section">
+            <div class="content-image-div">
+                <img src="static/eSnacks.png" id="imageBox" alt="eSnacks website image">
+            </div>
+            <div class="content-description-div">
+                <h1 class="project-title">The eSnacks app!</h1>
+                <div class="project-tags">#WebApplication #ECommerce #CSHARP</div>
+                <div class="project-description">
+                    <p>eSnacks is a web application that allows users to order food from various restaurants. The
+                        application is developed using Asp.Net Core, Entity Framework, and MSSqlServer.</p>
+                    <p>The application supports user registration and login, selecting a city and displaying a list of
+                        restaurants in that city, restaurant selection and menu display, adding menu items to the
+                        shopping cart, viewing and modifying the shopping cart, placing an order, viewing order history,
+                        and managing user profiles.</p>
+                    <p>The application comes with seeded data, including two users, and users can change their password
+                        after logging into the application for security purposes.</p>
+                </div>
+            </div>
+        </section>
+        <article id="boxes-article" class="boxes-article">
+            <ul class="boxes-ul">
+                <li class="box">
+                    <h3>Asp.Net Core</h3>
+                    <div class="box-description">A cross-platform, high-performance, open-source framework for building
+                        modern, cloud-based, Internet-connected applications.</div>
+                    <hr class="hr-neon">
+                    <div class="box-caption">.NET 6</div>
                 </li>
-                <li>
-                    <a id="esnacks" href="./projectPage.html" class="navitem
-                        active">Project eSnacks</a>
+                <li class="box">
+                    <h3>Entity Framework</h3>
+                    <div class="box-description">A lightweight, extensible, open source and cross-platform ORM for .NET
+                        applications.</div>
+                    <hr class="hr-neon">
+                    <div class="box-caption">Ver. 6.0.14</div>
                 </li>
-                <li>
-                    <a id="contactme" href="./contactMePage.html"
-                        class="navitem">Contact me</a>
+                <li class="box">
+                    <h3>Microsoft SQL Server</h3>
+                    <div class="box-description">A relational database management system developed by Microsoft. It is a
+                        highly scalable, secure, and reliable database system used by businesses of all sizes.</div>
+                    <hr class="hr-neon">
+                    <div class="box-caption">Ver. 2012+</div>
+                </li>
+                <li class="box">
+                    <h3>Docker</h3>
+                    <div class="box-description">An open platform for developing, shipping, and running applications. It
+                        enables developers to easily build, package, and deploy applications as portable containers that
+                        can run almost anywhere.</div>
+                    <hr class="hr-neon">
+                    <div class="box-caption">Ver. 3.9</div>
                 </li>
             </ul>
-        </nav>
-        <main class="container" id="container">
-            <div id="imgModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <img src="" id="modal-image" class="modal-image"/>
-                </div>
-            </div>
-            <section id="content-section" class="content-section">
-                <div class="content-image-div">
-                    <img src="static/eSnacks.png" id="imageBox" alt="eSnacks
-                        website image">
-                </div>
-                <div class="content-description-div">
-                    <h1 class="project-title">The eSnacks app!</h1>
-                    <div class="project-tags">#WebApplication #ECommerce</div>
-                    <div class="project-description">
-                        <p>eSnacks is a web application that allows users to
-                            order food from various restaurants. The application
-                            is developed using Asp.Net Core, Entity Framework,
-                            and MSSqlServer.</p>
-                        <p>The application supports user registration and login,
-                            selecting a city and displaying a list of
-                            restaurants in that city, restaurant selection and
-                            menu display, adding menu items to the shopping
-                            cart, viewing and modifying the shopping cart,
-                            placing an order, viewing order history, and
-                            managing user profiles.</p>
-                        <p>The application comes with seeded data, including two
-                            users, and users can change their password after
-                            logging into the application for security purposes.</p>
-                    </div>
-                </div>
-            </section>
-            <article id="boxes-article" class="boxes-article">
-                <ul class="boxes-ul">
-                    <li class="box">
-                        <h3>Asp.Net Core</h3>
-                        <div class="box-description">A cross-platform,
-                            high-performance, open-source framework for building
-                            modern, cloud-based, Internet-connected
-                            applications.</div>
-                        <hr class="hr-neon" style="margin-top:auto;">
-                        <div class="box-caption">.NET 6</div>
-                    </li>
-                    <li class="box">
-                        <h3>Entity Framework</h3>
-                        <div class="box-description">A lightweight, extensible,
-                            open source and cross-platform ORM for .NET
-                            applications.</div>
-                        <hr class="hr-neon" style="margin-top:auto;">
-                        <div class="box-caption">Ver. 6.0.14</div>
-                    </li>
-                    <li class="box">
-                        <h3>Microsoft SQL Server</h3>
-                        <div class="box-description">A relational database
-                            management system developed by Microsoft. It is a
-                            highly scalable, secure, and reliable database
-                            system used by businesses of all sizes.</div>
-                        <hr class="hr-neon" style="margin-top:auto;">
-                        <div class="box-caption">Ver. 2012+</div>
-                    </li>
-                    <li class="box">
-                        <h3>Docker</h3>
-                        <div class="box-description">An open platform for
-                            developing, shipping, and running applications. It
-                            enables developers to easily build, package, and
-                            deploy applications as portable containers that can
-                            run almost anywhere.</div>
-                        <hr class="hr-neon" style="margin-top:auto;">
-                        <div class="box-caption">Ver. 3.9</div>
-                    </li>
-                </ul>
-            </article>
-        </main>
-        <aside class="side-footer">
-            <a href="#" class="google">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <i class="fa fa-google"></i>
-            </a>
-            <a href="#" class="github">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <i class="fa fa-github"></i>
-            </a>
-            <a href="#" class="linkedin">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <i class="fa fa-linkedin"></i>
-            </a>
-            <div class="footer-footer">
-                <p>&copy; 2023</p>
-                <p>Jakub Augustyn</p>
-            </div>
-        </aside>
+        </article>
+    </main>
+    <aside class="side-footer">
+        <a href="#" class="google">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <i class="fa fa-google"></i>
+        </a>
+        <a href="https://github.com/jaugustyn/SimpleWebsite" class="github" target="_blank">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <i class="fa fa-github"></i>
+        </a>
+        <a href="#" class="linkedin">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <i class="fa fa-linkedin"></i>
+        </a>
+        <div class="footer-footer">
+            <p>&copy; 2023</p>
+            <p>Jakub Augustyn</p>
+        </div>
+    </aside>
 
-        <script src="./functions.js"></script>
-    </body>
+    <script src="./functions.js"></script>
+</body>
+
 </html>

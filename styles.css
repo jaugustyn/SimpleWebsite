@@ -311,6 +311,7 @@ body {
     border-top: 4px solid var(--neon-color);
     border-right: 4px solid var(--neon-color);
     border-radius: 5px;
+    margin-top: auto;
 }
 
 .hr-gray {
@@ -478,7 +479,7 @@ body {
     padding: 10px;
 }
 
-.welcome-section div{
+.welcome-section article{
     color: var(--medium-gray-font-color);
     padding: 10px;
     font-size: 17px;
